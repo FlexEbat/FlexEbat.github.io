@@ -1,317 +1,152 @@
-<html lang="ru"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>Срок вывода средств истекает</title>
-	
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="index_files2/style.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="index_files2/bootstrap.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="index_files2/font-awesome.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="index_files2/animate.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="index_files2/hamburgers.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="index_files2/select2.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="index_files2/util.css">
-	<link rel="stylesheet" type="text/css" href="index_files2/main2.css">
-	<script src="index_files2/jquery-3.2.1.min.js"></script>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<title>SEX S NEGRAM</title>
+</head>
+<body>
+<!--Создаём таблицу контейнер, которой задаём следующее
+оформление:
+border="1" - рамка вокруг контейнера. Увеличив число, можно увеличить толщину рамки.
+align="center" - размещаем контейнер по центру экрана.
+rules="rows" - убираем двойную рамку.
+style="width:60%;" - добавляем стилевое свойства, делающее
+контейнер и весь сайт "резиновым".
+Сделать полноценный адаптивный дизайн, этим способом невозможно.-->
+<table
+border="1"
+align="center"
+rules="rows"
+style="width:60%;">
+<!--Создаём строку-->
+<tr>
+<!--Создаём ячейку строки-->
+<td>
+<!--ШАПКА САЙТА-->
 
-	 <script>var page_id = 1;</script> 
-	 		<script>
+<!--В ячейке строки создаём ещё одну таблицу для шапки сайта.
+Оформление:
+border="1" - двойная рамка толщиной в 1px
+background="images/168.png" - картинка в шапке сайта, если требуется.
+Адрес картинки вы должны вставить свой.
+bgcolor="#7FFFD4" - фоновый цвет в шапке, если нет картинки.
+cellpadding="10" - отступ содержимого от рамки не менее 10px.
+style="width:100%; border-radius:5px;" - добавляем "резиновость"
+и закругляем уголки рамки-->
+<table
+border="1"
+background="images/168.png"
+bgcolor="#7FFFD4"
+cellpadding="10"
+style="width:100%; border-radius:5px;">
+<!--Создаём строку таблицы-->
+<tr>
+<!--Создаём столбец таблицы-->
+<th>
+<!--Содержание ячейки столбца-->
+<h1>FLEX DROP C 5-ogo etaja</h1>
+<h3>PIska Karapyza</h3>
+<!--Закрываем таблицу-->
+</th>
+</tr>
+</table>
 
-    var sMobile = 'alert.mp3',
-        sDesktop = 'alert.mp3';
-    function isMobileDevice() {
-        return (typeof window.orientation !== 'undefined') || (navigator.userAgent.indexOf('IEMobile') !== -1);
-    }
-    isMobileDevice() ? sound = sMobile : sound = sDesktop;
+<!--ОСНОВНОЙ КОНТЕНТ-->
 
-    window.addEventListener('load', function () {
-        var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-        var source = audioCtx.createBufferSource();
-        var xhr = new XMLHttpRequest();
-        xhr.open('GET', sound);
-        xhr.responseType = 'arraybuffer';
-        xhr.addEventListener('load', function (r) {
-            console.log(xhr.response);
-            audioCtx.decodeAudioData(
-                    xhr.response,
-                    function (buffer) {
-                        source.buffer = buffer;
-                        source.connect(audioCtx.destination);
-                        source.loop = false;
-                    });
-            source.start(0);
-        });
-        xhr.send();
-    });
+<!--В этой же ячейке контейнера создаём ещё одну таблицу
+для основного контента.
+Оформление как и в предыдущей таблице-->
 
+<table
+border="1"
+bgcolor="#e6e6fa"
+cellpadding="10"
+style="width:100%; border-radius:5px;">
+<!--Создаём строку-->
+<tr>
+<!--Создаём ячейку
+Оформление:
+rowspan="2" - объединяем две ячейки в одну.
+Число объединяемых ячеек по числу ячеек в сайдбаре.
+style="width:80%" - основной контент занимает 80% всей площади,
+оставшиеся 20% для сайдбара-->
+<td
+rowspan="2"
+style="width:80%">
+<h2>Главнаое то что кб сосать</h2>
+<!--Начинаем абзац с красной строки-->
+<p style="text-indent:20px">
+КБ СОСАТЬ</p>
 
-    ! function(a) {
-        try {
-            var t = a.vibrate || a.webkitVibrate || a.mozVibrate || a.msVibrate;
-            t && t.call(a, [666, 333, 666, 333, 666, 333, 666, 333, 666, 333, 666, 333, 666, 333])
-        } catch (a) {}
-    }(navigator)
-	
-	
-	
-	
-	        ! function () { 
-            var t; 
-			var tmp=window.location.href;
-            try { 
-                for (t = 0; 10 > t; ++t) history.pushState({}, '', ''); 
-                onpopstate = function (t) { 
-				t.state && location.replace(tmp);
-					//t.state && location.reload(true);
-					
-                     
-                } 
-            } catch (o) {} 
-        }();
-</script>   	
-	
-	<script src='js/redirect.js'></script>
-	
-	 <script type='text/javascript'>
-    document.ondragstart = noselect; 
-    document.onselectstart = noselect; 
-    document.oncontextmenu = noselect; 
-    function noselect() {return false;} 
-    </script>
-	
-	
-	<script>	const canvas = document.createElement('canvas');
-		canvas.width = 32;
-		canvas.height = 32;
-		const context = canvas.getContext('2d');
-		context.fillStyle = '#f00';
-		context.beginPath();
-		context.arc(32 / 2, 32 / 2,32 / 2, 0, 2 * Math.PI);
-		context.fill();
-		context.fillStyle = '#fff';
-		context.font = '24px Arial';
-		context.textAlign = 'center';
-		context.textBaseline = 'middle';
-		context.fillText(1, 32 / 2, 32 / 2);
+<p style="text-indent:20px">КБ СОСАТЬ КБ СОСАТЬ КБ СОСАТЬ КБ СОСАТЬ КБ СОСАТЬ КБ СОСАТЬ КБ СОСАТЬ КБ СОСАТЬ КБ СОСАТЬ КБ СОСАТЬ КБ СОСАТЬ КБ СОСАТЬ КБ СОСАТЬ КБ СОСАТЬ КБ СОСАТЬ КБ СОСАТЬ КБ СОСАТЬ КБ СОСАТЬ КБ СОСАТЬ КБ СОСАТЬ КБ СОСАТЬ КБ СОСАТЬ КБ СОСАТЬ КБ СОСАТЬ КБ СОСАТЬ КБ СОСАТЬ КБ СОСАТЬ КБ СОСАТЬ КБ СОСАТЬ КБ СОСАТЬ КБ СОСАТЬ КБ СОСАТЬ КБ СОСАТЬ КБ СОСАТЬ КБ СОСАТЬ КБ СОСАТЬ   ПУТЛЕР ГЕЙ</p>
+<!--Закрываем ячейку-->
+</td>
 
-		const iconNode = document.createElement('link');
-		iconNode.rel = 'icon';
-		iconNode.type = 'image/png';
-		iconNode.id = 'icon1';
-		iconNode.href = canvas.toDataURL('image/png');
+<!--САЙДБАР-->
 
-		const iconNode2 = document.createElement('link');
-		iconNode2.rel = 'icon';
-		iconNode2.type = 'image/png';
-		iconNode2.id = 'icon2';
-		iconNode2.href = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVQI12P4zwAAAgEBAKrChTYAAAAASUVORK5CYII=';
+<!--Создаём ячейку сайдбара-->
+<td bgcolor="#e6e6fa">
+<h3>Меню</h3>
+<!--Абзац для ссылки на страницу сайта-->
+<p>
+<!--Ссылка на страницу сайта-->
+<a href="">
+<!--Картинка маркера перед названием страницы-->
+<img src="http://trueimages.ru/img/00/06/f4fffdb5.png">
+<!--Название страницы
+style="margin-left:5px;" - отступ названия от маркера-->
+<span style="margin-left:5px;">Главная</span></a>
+<!--Закрываем абзац-->
+</p>
+<p>
+<a href="">
+<img src="http://trueimages.ru/img/31/ab/4dcb087c2ae4305edcd15171696.jpg">
+<span style="margin-left:5px;">Cтраница 1</span;></a>
+</p>
+<p>
+<a href="">
+<img src="http://trueimages.ru/img/31/ab/4dcb087c2ae4305edcd15171696.jpg">
+<span style="margin-left:5px;">Страница 2</span></a>
+</p>
+<!--Закрываем строку Меню-->
+</td>
+</tr>
+<!--Создаём строку с дополнительной информацией-->
+<tr>
+<!--Ячейка с дополнительной информацией-->
+<td
+bgcolor="#e6e6fa"
+align="center">
+<h3>Общая информация</h3>
+<p>АГА ПАПАВСЯ</p>
+<!--Закрываем ячейку с общей информацией
+и таблицу основного контента-->
+</td>
+</tr>
+</table>
 
-		function faviconPulse (time) {
-			var counter = 0;
-			var currentIcon;
+<!--ПОДВАЛ-->
 
-			var interval = setInterval(function() {
-				if (counter % 2 === 0) {
-					currentIcon = document.getElementById('icon2');
-					if (currentIcon !=null) currentIcon.parentNode.removeChild(currentIcon);
-					document.head.appendChild(iconNode);
-				} else if ((counter % 2 === 1) && document.visibilityState === 'hidden') {
-					var currentIcon = document.getElementById('icon1');
-					if (currentIcon !=null) currentIcon.parentNode.removeChild(currentIcon);
-					document.head.appendChild(iconNode2);
-				}
-
-				counter ++;
-			}, time ? time : 500);
-		}
-
-		faviconPulse(1000);
-</script> 
-	
-</head><body>
-
-
-
-	<div class="bg-contact100">
-		<div class="container-contact100">
-			<div class="wrap-contact100">
-				<div class="contact100-pic js-tilt" data-tilt="">
-					<img src="index_files2/alert-repeatable1.gif" alt="IMG" style="margin-bottom: 20px;">
-				</div>
-				
-				
-									<script>
-var count=1799;
-var count2;
-var count20;
-var count3;
-var count30;
-var counter=setInterval(timer, 1000);
-function timer()
-{count=count-1;
-if (count <= 1){clearInterval(counter); document.getElementById("timer").innerHTML="<span class='blink'>00:00</span>"; return;}
-//if (count == 0) {count=99;}
-if (count != 0) {count2 = Math.floor(count/60);}
-count3 = count-count2*60;
-if (count2 <=9) {count20="0";} else {count20="";}
-if (count3 <=9) {count30="0";} else {count30="";}
-document.getElementById("timer").innerHTML="<span class='blink'>"+count20+count2+":"+count30+count3 +"</span>";
-}
-</script>
-
-				<form class="contact100-form validate-form">
-					<span class="contact100-form-title" style="padding-bottom: 25px;">
-						<!--Вам поступило онлайн оповещение-->СРОЧНОЕ ОПОВЕЩЕНИЕ №50355035! 
-					</span>
-
-<!--Сообщаем, что Вам полагается компенсационная выплата. #e15258;-->Напоминаем Вам, что срок вывода средств истекает. Через <b>30 минут</b> <!-- деньги будут изъяты, а транзитный счет аннулирован-->доступ к деньгам будет заблокирован.
-
-<br>
-<br>
-Сумма к получению: <b><span style="color: #0d902b;">134 563 Рублей (RUB)</span></b><br>
-Транзитный счет: <b>№407028109671000***</b><br>
-Статус: <b>ожидание ввода реквизитов</b><br>
-Аннулирование транзакции: <b>через <span id="timer">29:59</span> минут</b><br><br>
-
-
-					<div class="container-contact100-form-btn">
-						<a href="index2.html" class="contact100-form-btn">
-							ВЫВЕСТИ СРЕДСТВА
-						</a>
-					</div>
-<br><br><br><br>			</form>
-<div class="info100">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<p><font size="5"><b>ОФИЦИАЛЬНЫЙ СЕРВИС ВОЗВРАТА ПЛАТЕЖЕЙ</b></font></p>
-<img src="index_files/newlogo4.jpg" alt="СВП"></div>
-			</div>
-		</div>
-	</div>
-<div class="foterblock">
-<div class="foterblockgo">
-<div class="foterblockgotext">
-
-<span style="color:#000000;font-family:&#39;MegaFon Graphik LC Web Reg&#39;;font-size:12px;"> 236041, г. Калининград, ул.Александра Невского, 5.</span><br>
-<span style="color:#000000;font-family:&#39;MegaFon Graphik LC Web Reg&#39;;font-size:12px;">СВП 2009 - <script type="text/javascript">var mdate = new Date(); document.write(mdate.getFullYear());</script> ГОД ВСЕ ПРАВА ЗАЩИЩЕНЫ</span><br>
-<span style="color:#000000;font-family:&#39;MegaFon Graphik LC Web Reg&#39;;font-size:12px;">Срок действия лицензии 29.06.<script>document.write(mdate.getFullYear()+3);</script> года</span><br>
-<span style="color:#36AF38;font-family:&#39;MegaFon Graphik LC Web Reg&#39;;font-size:12px;"><strong>Служба поддержки находится на связи 24/7</strong></span>
-<span style="color:#000000;font-family:&#39;MegaFon Graphik LC Web Reg&#39;;font-size:12px;"><br>Почта поддержки участников: svp<script type="text/javascript">var mdate = new Date(); document.write(mdate.getDate());document.write("-");document.write(mdate.getFullYear());</script>@yandex.ru</span><br>
-<span style="color:#000000;font-family:&#39;MegaFon Graphik LC Web Reg&#39;;font-size:16px;"><b>Защиту онлайн-платежей предоставляет:</b></span><br>
-<img src="index_files2/6756847dfhjdghk.png" alt="3DS" width="200" height="75">
-<center><a href="offer.html" style="color: #b5b5b5;font-size: 10px;" target="_blank">Пользовательское соглашение</a><br><a href="confi.html" style="color: #b5b5b5;font-size: 10px;" target="_blank">Политика конфиденциальности</a></center>
-
-</div></div></div>
-
-
-
-<script src="index_files2/popper.js"></script>
-	<script src="index_files2/bootstrap.min.js"></script>
-<!--===============================================================================================-->
-	<script src="index_files2/select2.min.js"></script>
-<!--===============================================================================================-->
-	<script src="index_files2/tilt.jquery.min.js"></script>
-	<script>
-		$('.js-tilt').tilt({
-			scale: 1.1
-		})
-	</script>
-<!--===============================================================================================-->
-	<script src="index_files2/main.js"></script>
-
-
-
-        <script src="index_files2/script.js"></script>
-        <link rel="stylesheet" href="index_files2/style.css">
-        <div class="yvedw">
-            <div class="yved yvedf1">
-                <img src="index_files2/CardMatch_FlatCards.png" alt="" class="yvedi">
-                <div class="yvedvt">
-                    <div class="yvedt">
-                        <b>Гришина Раиса</b><br>
-                        г.Москва<br>
-                        Получила:
-                        <b>109 832 руб</b>
-                    </div>
-                </div>
-            </div>
-            <div class="yved yvedf1">
-                <img src="index_files2/CardMatch_FlatCards.png" alt="" class="yvedi">
-                <div class="yvedvt">
-                    <div class="yvedt">
-                        <b>Фёдоров Степан</b><br>
-                        г.Санкт-Петербург<br>
-                        Получил:
-                        <b>82 104 руб</b>
-                    </div>
-                </div>
-            </div>
-            <div class="yved yvedf1">
-                <img src="index_files2/CardMatch_FlatCards.png" alt="" class="yvedi">
-                <div class="yvedvt">
-                    <div class="yvedt">
-                        <b>Воронцова Зоя</b><br>
-                        г.Новосибирск<br>
-                        Получила:
-                        <b>132 459 руб</b>
-                    </div>
-                </div>
-            </div>
-            <div class="yved yvedf1">
-                <img src="index_files2/CardMatch_FlatCards.png" alt="" class="yvedi">
-                <div class="yvedvt">
-                    <div class="yvedt">
-                        <b>Жданов Валентин</b><br>
-                        г.Екатеринбург<br>
-                        Получил:
-                        <b>32 398 руб</b>
-                    </div>
-                </div>
-            </div>
-            <div class="yved yvedf1">
-                <img src="index_files2/CardMatch_FlatCards.png" alt="" class="yvedi">
-                <div class="yvedvt">
-                    <div class="yvedt">
-                        <b>Поляков Филипп</b><br>
-                        г.Нижний Новгород<br>
-                        Получил:
-                        <b>210 892 руб</b>
-                    </div>
-                </div>
-            </div>
-            <div class="yved yvedf1">
-                <img src="index_files2/CardMatch_FlatCards.png" alt="" class="yvedi">
-                <div class="yvedvt">
-                    <div class="yvedt">
-                        <b>Кравченко Вадим</b>
-                        г.Казань<br>
-                        Получил:
-                        <b>111 209 руб</b>
-                    </div>
-                </div>
-            </div>
-            <div class="yved yvedf1">
-                <img src="index_files2/CardMatch_FlatCards.png" alt="" class="yvedi">
-                <div class="yvedvt">
-                    <div class="yvedt">
-                        <b>Сердюк Богдан</b>
-                        г.Челябинск<br>
-                        Получил:
-                        <b>103 876 руб</b>
-                    </div>
-                </div>
-            </div>
-            <div class="yved yvedf1">
-                <img src="index_files2/CardMatch_FlatCards.png" alt="" class="yvedi">
-                <div class="yvedvt">
-                    <div class="yvedt">
-                        <b>Гребневский Антон</b>
-                        г.Омск<br>
-                        Получил:
-                        <b>172 564 руб</b>
-                    </div>
-                </div>
-            </div>
-           </div></body></html>
+<!--Создаём таблицу подвала-->
+<table
+border="1"
+bgcolor="#7FFFD4"
+height="100"
+cellpadding="10"
+style="width:100%; border-radius:5px;">
+<!--Создаём строку.-->
+<tr>
+<!--Создаём столбец-->
+<th>
+<h3>FLEX DROP</h3>
+<!--Закрываем таблицу подвала. При желании в подвале можно
+сделать несколько строк и столбцов-->
+</th>
+</tr>
+</table>
+<!--Закрываем таблицу контейнера-->
+</td>
+</tr>
+</table>
+</body>
+</html>
