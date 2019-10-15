@@ -1,9 +1,159 @@
-<html>
+<!DOCTYPE html>
+<html lang="ru">
 <head>
-  <title>Первый сайт на PHP</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Верстка сайтов на boostrap</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+<link rel="stylesheet" href="css/main.css">
 </head>
-<meta http-equiv="refresh" content="5; url=https://flexebat.github.io/test.html">
 <body>
-  <a><big>Просто подожди 5000 милисекунд</a></big>
+	<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+	<div class="container-fluid">
+		<a href="#" class="navbar-brand"><img src="img/logo1.png"></a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+		  <span class="navbar-toggler-icon"></span>	 
+		</button>
+		<div class="collapse navbar-collapse" id="navbarResponsive">
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item">
+					<a href="#" class="nav-link active">Главная</a>
+				</li>
+								<li class="nav-item">
+					<a href="#" class="nav-link">Про нас</a>
+				</li>
+								<li class="nav-item">
+					<a href="#" class="nav-link">Контакты</a>
+				</li>
+								<li class="nav-item">
+					<a href="#" class="nav-link">Сервисы</a>
+									<li class="nav-item">
+					<a href="#" class="nav-link">Команда</a>
+				</li>
+				</li>
+			</ul>
+		</div>
+	 </div>
+	</nav>
+	<div class="carousel slide" data-ride="carousel" id="slides">
+		 <ul class="carousel-indicators">
+		 	<li data-target="#slides" data-slide-to="0" class="active"></li>
+		 	<li data-target="#slides" data-slide-to="1" class="active"></li>
+		 	<li data-target="#slides" data-slide-to="2" class="active"></li>
+		 </ul>
+		<div class="carousel-inner">
+			<div class="carousel-item active">
+			<img src="img/slide_1.jpg">
+			<div class="carousel-caption">
+				<h1 class="display-2">It-Sphere</h1>
+				<h3>Научитесь программировать</h3>
+				<button type="button" class="btn btn-outline-light btn-lg">Посмотреть</button>
+				<button type="button" class="btn btn-warning btn-lg">Демо сайта</button>
+			 </div>
+			</div>
+				<div class="carousel-item">
+				<img src="img/slide_2.jpg">
+			</div>
+				<div class="carousel-item">
+				<img src="img/slide_3.jpeg">
+			</div>
+		</div>
+	</div>
+ <div class="container-fluid">
+	<div class="row jumbotron">
+		<div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-10">
+		<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium sequi natus dolores, perferendis dolorum rerum ratione eligendi tempora beatae amet optio dignissimos, nobis blanditiis sapiente fuga. Recusandae quia, itaque rem. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni molestias accusantium, magnam doloremque explicabo in! Impedit velit sit quidem eos maiores ipsa ducimus sint ratione obcaecati, doloribus totam officia maxime.</p>
+	</div>
+		<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-2">
+		<a href="#"><button class="btn btn-success btn-lg" type="button">Читать далее</button></a>
+</div>
+</div>
+	<div class="container-fluid">
+		<div class="row text-center alert">
+			<div class="col-12">
+				<h1 class="display-4">Создание сайтов</h1>
+				<hr>
+				<div class="col-12">
+					<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos harum dignissimos, velit suscipit praesentium incidunt tempora recusandae quas id explicabo ipsam nam atque quisquam expedita accusamus, quae quaerat iusto architecto, dolor. Quibusdam, asperiores. Cum praesentium iure sequi ex ipsum magni vero perferendis fugiat, neque at officiis nemo atque alias harum nisi dolorum doloremque consequuntur, ad repellat laudantium exercitationem provident quasi.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid padding">
+	<div class="row text-center padding">
+		<div class="col-xs-12 col-sm-6 col-md-4">
+			<i class="fas fa-code"></i>
+			<h3>HTML5</h3>
+			<p>HTML (HyperText Markup Language) — язык разметки (маркировки) гипертекста. Гипертекст своим развитием обязан интернету, хоть и создавался он совсем не для того. HTML дает возможность производить переход от одной части текста к другой, и, что замечательно, эти части могут храниться на совершенно разных компьютерах.</p>
+		</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+			<i class="fas fa-bold"></i>
+			<h3>Bootstrap </h3>
+			<p>Bootstrap (также известен как Twitter Bootstrap) — свободный набор инструментов для создания сайтов и веб-приложений. Включает в себя HTML- и CSS-шаблоны оформления для типографики, веб-форм, кнопок, меток, блоков навигации и прочих компонентов веб-интерфейса, включая JavaScript-расширения.
+
+Bootstrap использует современные наработки в области CSS и HTML, поэтому необходимо быть внимательным при поддержке старых браузеров.</p>
+		</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+			<i class="fab fa-css3"></i>
+			<h3>CSS3</h3>
+			<p>Cпецификация CSS3 — это неоспоримое будущее в области декоративного оформления веб-страниц, и ее разработка еще далека от завершения. Большинство модулей все еще продолжает совершенствоваться и модифицироваться, и ни один браузер не поддерживает все модули. Это означает, что CSS3 испытывает такие же сложности, как и HTML5. Веб-разработчикам нужно решать, какие возможности использовать, а какие игнорировать, а также каким образом заполнить зияющие пробелы в браузерной поддержке.</p>
+		</div>
+	 </div>
+	 <hr class="my-4">
+	</div>
+	<div class="container-fluid padding">
+		<div class="row padding">
+			<div class="offset-lg-2 col-lg-4">
+				<h2>Что-то про программирование</h2>
+				<p>Программи́рование — процесс создания компьютерных программ.
+По выражению одного из основателей языков программирования Никлауса Вирта «Программы = алгоритмы + структуры данных»[1][2].
+Программирование основывается на использовании языков программирования, на которых записываются исходные тексты программ.
+			<br><br>
+			Первой советской открытой книгой по программированию, электронным вычислительным машинам и их различным применениям была выпущенная в начале 1956 года монография Анатолия Ивановича Китова «Электронные цифровые машины»[7][8]. Заключительная треть этой книги посвящена</p>
+						<br>
+			Большая часть работы программистов связана с написанием исходного кода, тестированием и отладкой программ на одном из языков программирования. Исходные тексты и исполняемые файлы программ являются объектами авторского права и являются интеллектуальной собственностью их авторов и правообладателей[источник не указан 587 дней].</p>
+			<br>
+			<a href="#" class="btn btn-danger">Читать далее</a>
+			</div>
+			<div class="col-lg-6">
+				<br>
+				<img src="img/ahaha1.png" class="img-fluid">
+				<img src="img/ahaha.png" class="img-fluid">
+			</div>
+		</div>
+	</div>
+	<figure>
+		<div class="fixed-wrap">
+			<div id="fixed">
+				
+			</div>
+		</div>
+	</figure>
+	<div class="text-center">
+		<button type="button" class="btn btn-success" data-toggle="collapse" data-target="#gifs">Открыть блок</button>
+	</div>
+	<div id="gifs" class="collapse">
+		<div class="container-fluid padding">
+			<div class="row text-center">
+				<div class="col-sm-6 col-md-3">
+					<img src="https://media.giphy.com/media/3ohhwAdkuOjoghC0ne/giphy.gif" class="gif">
+				</div>
+								<div class="col-sm-6 col-md-3">
+					<img src="https://media.giphy.com/media/l1J9N3mbm2xpmM5Rm/giphy.gif" class="gif">
+				</div>
+								<div class="col-sm-6 col-md-3">
+					<img src="https://media.giphy.com/media/l1J9N3mbm2xpmM5Rm/giphy.gif" class="gif">
+				</div>
+								<div class="col-sm-6 col-md-3">
+					<img src="https://media.giphy.com/media/3ohhwJIK3JHdDVHwyI/giphy.gif" class="gif">
+				</div>
+			</div>
+		</div>
+	</div>
 </body>
 </html>
