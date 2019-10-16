@@ -80,14 +80,48 @@ body, html {
 	height: 400px;
 	border-top: 4px solid #f0f0f0;
 	border-bottom: 4px solid #f0f0f0;
-	background: url("../img/bg.jpg") no-repeat center center fixed;
+	background: url("../img/bg.jpg") no-repeat center center;
 	background-blend-mode: multiply;
-	background-color: red;
+	background-color: lightblue;
 	background-size: cover;
 	-o-background-size: cover;
 	-moz-background-size: cover;
 	-webkit-background-size: cover;
 }
 
+#gifsBtn {
+	margin-bottom: 20px;
+}
 
+#gifs img {
+	max-width: 100%;
+	max-height: 200px;
+	margin-bottom: 20px;
+}
 
+@media (max-width: 750px) {
+	.display-4 {
+		font-size: 1.5em;
+	}
+}
+
+.social a {
+	font-size: 4em;
+	padding: 50px;
+}
+
+.fa-vk {color: #3b5998}
+.fa-youtube {color: #FF0000}
+.fa-google-plus-g {color: #0000FF}
+
+.fa-vk:hover, .fa-youtube:hover,
+.fa-google-plus-g:hover {
+	color: #ccc;
+}
+
+footer {
+	background-color: #3f3f3f;
+	padding-top: 50px;
+	border-top: 4px solid silver;
+	color: white;
+}
