@@ -25,6 +25,41 @@ position:relative; /* Задаём блоку относительное поз�
   border-radius: 5px; /* Закругляются углы блока */
   box-shadow: rgba(0,0,0,0.5) 0px 1px 3px; /* Тень. Визуально приподнимает блок над оболочкой */
 }
+
+.kvasov-example-link a {
+	color: #3399FF;
+	text-decoration:none;
+	-webkit-transition-duration: 0.4s;
+	transition-duration: 0.4s;
+	position:relative;
+	display:inline-block;
+}	
+.kvasov-example-link a:hover {
+	text-decoration:none;
+	color: #337AB7;
+	z-index:10;
+	position:relative;
+}		
+.kvasov-example-link a::after{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	content: "";
+	z-index:-1;
+	top:0;
+	left:0;
+	pointer-events: none;
+	-webkit-transition-duration: 0.4s;
+	transition-duration: 0.4s;
+	opacity:0;
+}
+.kvasov-example-link a:hover::after,
+.kvasov-example-link a:focus::after {
+	background: #FFF;
+	opacity:0.8;
+}
+ 
+
 img{ /* Фоновая картинка в шапке */
 float: left; /* Разрешаем наплывание других элементов на картинку */
   margin: -40px 0 0 0;} /* Размещаем картинку в блоке header. 1-я и 3-я цифры - двигаем вверх-вниз, 2-я и 4-я цифры - двигаем вправо-влево */
@@ -107,6 +142,10 @@ h1{ /* Заголовок сайта */
     <div id="header">
 <!--Заголовок сайта-->
       <h2>Благодарность Мемо-делом</h2>
+      <div class="kvasov-example-link">
+<p><a href="https://vk.com/litvaaaaaa">Анна</a></p>
+<p><a href="https://vk.com/id325403867">Сергей</a></p>
+</div>    
 <!--Описание (телефон)-->
         <p class="nomer">Спасибо Вам</p>
 <!--Фоновая картинка в шапке сайта-->
@@ -145,9 +184,8 @@ h1{ /* Заголовок сайта */
   <div class="clear"></div>
 <!--Подвал-->
     <div id="footer">
-      <p class="fon"><strong>Телефон:<br> XXXXXXXXXXXX</strong> </p>
-      <p class="fax"><strong>Факс:<br> XXXXXXXXXX</strong></p>
-      <p class="mail"><strong>E-mail<br>XXXXXXXXXX</strong></p>
+      <p class="fon"><strong>Телефон:<br> memes.mail.ru.(This fake)</strong> </p>
+      <p class="mail"><strong>E-mail<br>memes.mail.ru.(This fake)</strong></p>
 
     </div>
   </div>
