@@ -1,193 +1,215 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="utf-8" />
-<title>7B</title>
-
-<style>
-body{
-  background:#c0c0c0; /* Меняется фон экрана, выбирается здесь */
-}
-
-#wrapper{ /* Оболочка страницы сайта */
-  width: 900px; /* Меняется ширина страницы */
-  margin: 0 auto;
-  background:#f2e8c9; /* Меняется задний фон страницы */
-}
-
-/* Шапка сайта */
-
-#header{
-position:relative; /* Задаём блоку относительное позиционирование для того, чтобы затем размещать, в нём другие элементы и позиционировать относительно его границ поверх фоновой картинки и заголовка */
-  height: 250px; /* Высота шапки */
-  background-color: #ffffff; /* Фон шапки */
-   margin-bottom: 5px; /* Нижний отступ шапки от остального контента */
-  border-radius: 5px; /* Закругляются углы блока */
-  box-shadow: rgba(0,0,0,0.5) 0px 1px 3px; /* Тень. Визуально приподнимает блок над оболочкой */
-}
-
-.kvasov-example-link a {
-	color: #3399FF;
-	text-decoration:none;
-	-webkit-transition-duration: 0.4s;
-	transition-duration: 0.4s;
-	position:relative;
-	display:inline-block;
-}	
-.kvasov-example-link a:hover {
-	text-decoration:none;
-	color: #337AB7;
-	z-index:10;
-	position:relative;
-}		
-.kvasov-example-link a::after{
-	position: fixed;
-	width: 100%;
-	height: 100%;
-	content: "";
-	z-index:-1;
-	top:0;
-	left:0;
-	pointer-events: none;
-	-webkit-transition-duration: 0.4s;
-	transition-duration: 0.4s;
-	opacity:0;
-}
-.kvasov-example-link a:hover::after,
-.kvasov-example-link a:focus::after {
-	background: #FFF;
-	opacity:0.8;
-}
- 
-
-img{ /* Фоновая картинка в шапке */
-float: left; /* Разрешаем наплывание других элементов на картинку */
-  margin: -40px 0 0 0;} /* Размещаем картинку в блоке header. 1-я и 3-я цифры - двигаем вверх-вниз, 2-я и 4-я цифры - двигаем вправо-влево */
-h1{ /* Заголовок сайта */
-  margin:0 0 10px 40px; /* Заголовок двигается верх-вправо-вниз-влево. */
-  color:#464451; /* Цвет заголовка */
-}
-.nomer{ /*Подзаголовок (номер телефона)*/
-  position:absolute; /* Позиционируем абсолютно подзаголовок, относительно границ блока header. Также можно разместить в шапке сайта ещё другие картинки и абзацы поверх фоновой картинки и заголовка */
-  top:5px; /* Двигается вверх-вниз */
-  left:680px; /* Двигается вправо-влево */
-  font-size: 25px; /* Размер букв подзаголовка */
-  font-style:italic; /* Курсив */
-  font-weight:bold; /* Жирный */
-  color:#464451; /* Цвет букв подзаголовка */
-}
-
-/* Сайдбар (колонка справа) */
-
-#sidebar{ /* Блок сайдбара */
-  background-color: #ffffff; /* Фон блока */
-  width: 180px; /* Ширина блока */
-  padding: 10px; /* Отступ текста от краёв */
-  float: right; /* Размещаем блок справа от других элементов, наплывание или обтекание справа). Если делать сайдбар слева, то значение right меняем на left */
-  border-radius: 5px; /* Закругляем углы блока */
-  box-shadow: rgba(0,0,0,0.5) 0px 1px 3px; /* Задаём блоку тень */
-}
-.marcer{ /* Галочки маркеры меню */
-  float: left; /* Размещаем слева от текста */
-  margin: 5px 5px 0 0; /* Двигаются вверх-вправо-вниз-влево */
-}
-
-/* Контент (статья) */
-
-#content{ /* Блок контента */
-  margin-bottom: 5px; /* Отступ блока статьи от блока подвала */
-  width: 676px; /* Ширина статьи */
-  padding: 10px; /* Отступ текста от краёв блока */
-  background: #ffffff; /* Фон статьи */
-  border-radius: 5px;
-  box-shadow: rgba(0,0,0,0.5) 0px 1px 3px;
-}
-.left{ /* Картинка в тексте слева */
-  float: left;
-  margin: 30px 7px 7px 7px;
-}
-.right{ /* Картинка в тексте справа */
-  float: right;
-  margin: 7px 0 7px 7px;
-}
-/* Подвал */
-
-#footer{ /* Блок подвала */
-  height:80px; /* Высота блока подвала */
-  background-color: #ffffff; /* Фон блока подвала */
-  margin-bottom: 10px; /* Отступ снизу */
-  border-radius: 5px; /* Закруглённые углы */
-  box-shadow: rgba(0,0,0,0.5) 0px 1px 3px; /* Тень блока */
-}
-.clear{ /* Запрет наплывания. Устанавливается для того, чтобы блок контента, при заполнении текстом и изображениями не наплывал на подвал */
-  clear: both;
-}
-  .fon{ /* Номер телефона */
-  float:left; /* Разрешаем другим элементам обтекать абзац справа */
-  margin:20px 0 0 20px;
-}
-.fax{ /* Номер факса */
-  float:left;
-  margin:20px 0 0 60px;
-}
-.mail{ /* Адрес E-mail */
-  float:left;
- margin:20px 0 0 60px;
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Верстка сайтов на boostrap</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-  <div id="wrapper"> <!--Оболочка страницы-->
-<!--Шапка сайта-->
-    <div id="header">
-<!--Заголовок сайта-->
-      <h2>Благодарность Мемо-делом</h2>
-      <div class="kvasov-example-link">
-<p><a href="https://vk.com/litvaaaaaa">Анна</a></p>
-<p><a href="https://vk.com/id325403867">Сергей</a></p>
-</div>    
-<!--Описание (телефон)-->
-        <p class="nomer">Спасибо Вам</p>
-<!--Фоновая картинка в шапке сайта-->
-      <img src="http://trueimages.ru/img/74/49/ccdaabd5.jpg">
-    </div>
-<!--Сайдбар-->
-    <div id="sidebar">
-<!--меню-->
-      <h3>На нашем сайте</h3>
-<!--Картинки маркеров меню (галочки)-->
-        <p><img class="marcer" src="http://trueimages.ru/img/99/91/dea39f15.png" width="10" height="10">Реальный Флекс</p>
-        <p><img class="marcer" src="http://trueimages.ru/img/99/91/dea39f15.png" width="10" height="10">Юмор</p>
-        <p><img class="marcer" src="http://trueimages.ru/img/99/91/dea39f15.png" width="10" height="10">Бага крутой</p>
-<!--Прямая синяя линия-->
-          <hr width="50" color="#037FFC" size="5">
-<!--Общая информация в сайдбаре-->
-      <h3>Другая информация</h3>
-      <p>Мы настолько мощные флексеры что пилим мемы про наш класс. И это рили орно, так-что мы туалетные флексеры.</p>
-    </div>
-<!--Основной контент (статья)-->
-    <div id="content">
-<!--Картинка слева-->
- 
-<!--Заголовок статьи-->
-        <h3>Наша работа</h3>
-<!--Текст статьи-->
-<p>Здравствуй, мы мемо-делы</p>
-<p>Нам "Очень много лет. По-этому мы знаем что как и почему, зачем. Так что мы тут орно-делы."</p>
-<!--Картинка справа-->
+	<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+	<div class="container-fluid">
+		<a href="#" class="navbar-brand"><img src="img/logo.png"></a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+		  <span class="navbar-toggler-icon"></span>	 
+		</button>
+		<div class="collapse navbar-collapse" id="navbarResponsive">
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item">
+					<a href="#" class="nav-link active">Главная</a>
+				</li>
+								<li class="nav-item">
+					<a href="#" class="nav-link">Про нас</a>
+				</li>
+								<li class="nav-item">
+					<a href="#" class="nav-link">Контакты</a>
+				</li>
+								<li class="nav-item">
+					<a href="#" class="nav-link">Сервисы</a>
+									<li class="nav-item">
+					<a href="#" class="nav-link">Команда</a>
+				</li>
+				</li>
+			</ul>
+		</div>
+	 </div>
+	</nav>
+	<div class="carousel slide" data-ride="carousel" id="slides">
+		 <ul class="carousel-indicators">
+		 	<li data-target="#slides" data-slide-to="0" class="active"></li>
+		 	<li data-target="#slides" data-slide-to="1" class="active"></li>
+		 	<li data-target="#slides" data-slide-to="2" class="active"></li>
+		 </ul>
+		<div class="carousel-inner">
+			<div class="carousel-item active">
+			<img src="img/slide_1.jpg">
+			<div class="carousel-caption">
+				<h1 class="display-2">It-Sphere</h1>
+				<h3>Научитесь программировать</h3>
+				<button type="button" class="btn btn-outline-light btn-lg">Посмотреть</button>
+				<button type="button" class="btn btn-warning btn-lg">Демо сайта</button>
+			 </div>
+			</div>
+				<div class="carousel-item">
+				<img src="img/slide_2.jpg">
+			</div>
+				<div class="carousel-item">
+				<img src="img/slide_3.jpeg">
+			</div>
+		</div>
+	</div>
+ <div class="container-fluid">
+	<div class="row jumbotron">
+		<div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-10">
+		<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium sequi natus dolores, perferendis dolorum rerum ratione eligendi tempora beatae amet optio dignissimos, nobis blanditiis sapiente fuga. Recusandae quia, itaque rem. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni molestias accusantium, magnam doloremque explicabo in! Impedit velit sit quidem eos maiores ipsa ducimus sint ratione obcaecati, doloribus totam officia maxime.</p>
+	</div>
+		<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-2">
+		<a href="#"><button class="btn btn-success btn-lg" type="button">Читать далее</button></a>
+</div>
+</div>
+	<div class="container-fluid">
+		<div class="row text-center alert">
+			<div class="col-12">
+				<h1 class="display-4">Создание сайтов</h1>
+				<hr>
+				<div class="col-12">
+					<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos harum dignissimos, velit suscipit praesentium incidunt tempora recusandae quas id explicabo ipsam nam atque quisquam expedita accusamus, quae quaerat iusto architecto, dolor. Quibusdam, asperiores. Cum praesentium iure sequi ex ipsum magni vero perferendis fugiat, neque at officiis nemo atque alias harum nisi dolorum doloremque consequuntur, ad repellat laudantium exercitationem provident quasi.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid padding">
+	<div class="row text-center padding">
+		<div class="col-xs-12 col-sm-6 col-md-4">
+			<i class="fas fa-code"></i>
+			<h3>HTML5</h3>
+			<p>HTML (HyperText Markup Language) — язык разметки (маркировки) гипертекста. Гипертекст своим развитием обязан интернету, хоть и создавался он совсем не для того. HTML дает возможность производить переход от одной части текста к другой, и, что замечательно, эти части могут храниться на совершенно разных компьютерах.</p>
+		</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+			<i class="fas fa-bold"></i>
+			<h3>Bootstrap </h3>
+			<p>Bootstrap (также известен как Twitter Bootstrap) — свободный набор инструментов для создания сайтов и веб-приложений. Включает в себя HTML- и CSS-шаблоны оформления для типографики, веб-форм, кнопок, меток, блоков навигации и прочих компонентов веб-интерфейса, включая JavaScript-расширения.
 
-
-<p>Наш объет для внимания "Богда Дук <a href="https://vk.com/id544923749">Это он</a>"</p>
-<p>Он самый мощный из класса, его все боятся, так что, я скажу что вы меня обижаете, и он вас сам обидет XD <3</p>
-    </div>
-<!--Запрет наплывания-->
-  <div class="clear"></div>
-<!--Подвал-->
-    <div id="footer">
-      <p class="fon"><strong>Телефон:<br> memes.mail.ru.(This fake)</strong> </p>
-      <p class="mail"><strong>E-mail<br>memes.mail.ru.(This fake)</strong></p>
-
-    </div>
-  </div>
+Bootstrap использует современные наработки в области CSS и HTML, поэтому необходимо быть внимательным при поддержке старых браузеров.</p>
+		</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+			<i class="fab fa-css3"></i>
+			<h3>CSS3</h3>
+			<p>Cпецификация CSS3 — это неоспоримое будущее в области декоративного оформления веб-страниц, и ее разработка еще далека от завершения. Большинство модулей все еще продолжает совершенствоваться и модифицироваться, и ни один браузер не поддерживает все модули. Это означает, что CSS3 испытывает такие же сложности, как и HTML5. Веб-разработчикам нужно решать, какие возможности использовать, а какие игнорировать, а также каким образом заполнить зияющие пробелы в браузерной поддержке.</p>
+		</div>
+	 </div>
+	 <hr class="my-4">
+	</div>
+	<div class="container-fluid padding">
+		<div class="row padding">
+			<div class="offset-lg-2 col-lg-4">
+				<h2>Что-то про программирование</h2>
+				<p>Программи́рование — процесс создания компьютерных программ.
+По выражению одного из основателей языков программирования Никлауса Вирта «Программы = алгоритмы + структуры данных»[1][2].
+Программирование основывается на использовании языков программирования, на которых записываются исходные тексты программ.
+			<br><br>
+			Первой советской открытой книгой по программированию, электронным вычислительным машинам и их различным применениям была выпущенная в начале 1956 года монография Анатолия Ивановича Китова «Электронные цифровые машины»[7][8]. Заключительная треть этой книги посвящена</p>
+						<br>
+			Большая часть работы программистов связана с написанием исходного кода, тестированием и отладкой программ на одном из языков программирования. Исходные тексты и исполняемые файлы программ являются объектами авторского права и являются интеллектуальной собственностью их авторов и правообладателей[источник не указан 587 дней].</p>
+			<br>
+			<a href="#" class="btn btn-danger">Читать далее</a>
+			</div>
+			<div class="col-lg-6">
+				<br>
+				<img src="img/ahaha.png" class="img-fluid">
+			</div>
+		</div>
+	</div>
+	<figure>
+		<div class="fixed-wrap">
+			<div id="fixed">
+				
+			</div>
+		</div>
+	</figure>
+	<hr>
+	<div class="text-center">
+		<button type="button" id="gifsBtn" class="btn btn-success" data-toggle="collapse" data-target="#gifs">Открыть блок</button>
+	</div>
+	<div id="gifs" class="collapse">
+		<div class="container-fluid padding">
+			<div class="row text-center">
+				<div class="col-sm-6 col-md-3">
+					<img src="https://media.giphy.com/media/3ohhwAdkuOjoghC0ne/giphy.gif" class="gif">
+				</div>
+								<div class="col-sm-6 col-md-3">
+					<img src="https://media.giphy.com/media/l1J9N3mbm2xpmM5Rm/giphy.gif" class="gif">
+				</div>
+								<div class="col-sm-6 col-md-3">
+					<img src="https://media.giphy.com/media/l1J9N3mbm2xpmM5Rm/giphy.gif" class="gif">
+				</div>
+								<div class="col-sm-6 col-md-3">
+					<img src="https://media.giphy.com/media/3ohhwJIK3JHdDVHwyI/giphy.gif" class="gif">
+				</div>
+			</div>
+		</div>
+	</div>
+	<hr>
+	<div class="container-fluid padding">
+		<div class="row aler text-center">
+			<div class="col-12">
+				<h1 class="display-4">Языки программированмя</h1>
+			</div>
+		</div>
+	</div>
+	<div class="container padding">
+		<div class="row padding">
+			<div class="col-md-4">
+				<div class="card">
+					<img src="https://www.wallpaperup.com/uploads/wallpapers/2014/09/24/455547/7266c70a58994e191678275d8e3d8b3e-700.jpg" class="card-img-top">
+					<div class="card-body">
+						<h4 class="card-title">Unreal Engine</h4>
+						<p class="card-text">Unreal Engine — игровой движок, разрабатываемый и поддерживаемый компанией Epic Games. Первой игрой на этом движке был шутер от первого лица Unreal, выпущенный в 1998 году. Хотя движок первоначально был предназначен для разработки шутеров от первого лица, его последующие версии успешно применялись в играх самых различных жанров, в том числе стелс-играх, файтингах и массовых многопользовательских ролевых онлайн-играх. В прошлом движок распространялся на условиях оплаты ежемесячной подписки; с 2015 года Unreal Engine бесплатен, но разработчики использующих его игр обязаны перечислять 5% роялти от продаж.</p>
+						<a href="#" class="btn btn-warning">Посмотреть</a>
+		</div>
+	</div>
+</div>
+					<div class="col-md-4">
+				<div class="card">
+					<img src="https://www.wallpaperup.com/uploads/wallpapers/2014/09/24/455547/7266c70a58994e191678275d8e3d8b3e-700.jpg" class="card-img-top">
+					<div class="card-body">
+						<h4 class="card-title">Python</h4>
+						<p class="card-text">Python[комм 2] (МФА: [ˈpʌɪθ(ə)n]; в русском языке распространено название пито́н[10]) — высокоуровневый язык программирования общего назначения, ориентированный на повышение производительности разработчика и читаемости кода. Синтаксис ядра Python минималистичен. В то же время стандартная библиотека включает большой объём полезных функций.</p>
+						<a href="#" class="btn btn-warning">Посмотреть</a>
+		</div>
+	</div>
+	</div>
+				<div class="col-md-4">
+				<div class="card">
+					<img src="https://www.wallpaperup.com/uploads/wallpapers/2014/09/24/455547/7266c70a58994e191678275d8e3d8b3e-700.jpg" class="card-img-top">
+					<div class="card-body">
+						<h4 class="card-title">Java scripts</h4>
+						<p class="card-text">JavaScript обычно используется как встраиваемый язык для программного доступа к объектам приложений. Наиболее широкое применение находит в браузерах как язык сценариев для придания интерактивности веб-страницам[7].</p>
+						<a href="#" class="btn btn-warning">Посмотреть</a>
+		</div>
+	</div>
+</div>
+</div>
+</div>
+ <footer class="container-fluid">
+ 	<div class="container-fluid">
+ 		<div class="row padding text-center">
+ 			<div class="col-12">
+ 				<h2>Наши контакты</h2>
+ 			</div>
+ 			<div class="col-12 social padding">
+ 				<a href="https://vk.com/zlomzlomzlomzlomzlomzlomzlomzlom"><i class="fab fa-vk"></i></a>
+ 				<a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+ 				<a href="https://plus.google.com/"><i class="fab fa-google-plus-g"></i></a>
+ 			</div>
+ 		</div>
+ 	</div>
+ </footer>
 </body>
 </html>
