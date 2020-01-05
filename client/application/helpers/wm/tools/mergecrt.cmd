@@ -1,1 +1,0 @@
-@copy /B ..\cert\* ..\WMXI.crt
